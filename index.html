@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سیستم حسابداری کافه</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Vazirmatn', sans-serif;
+      }
+      @media print {
+        /* Hide the main UI components that we don't want to print */
+        body > #root > div > header,
+        body > #root > div > main {
+          display: none;
+        }
+
+        /* Reset modal overlay styles for printing */
+        .fixed.inset-0 {
+          position: static !important;
+          background: transparent !important;
+          padding: 0 !important;
+          display: block !important;
+        }
+
+        /* Reset modal content box styles for printing */
+        .bg-white.dark\:bg-gray-800.rounded-lg.shadow-xl {
+          box-shadow: none !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          border-radius: 0 !important;
+          background-color: white !important;
+          color: black !important;
+        }
+        
+        /* Ensure text within the print area is black, overriding dark mode styles */
+        #print-area * {
+           color: black !important;
+        }
+
+        /* Hide elements specifically marked not for printing */
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <div id="root"></div>
+  </body>
+</html>
